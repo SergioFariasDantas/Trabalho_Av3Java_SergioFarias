@@ -1,0 +1,5 @@
+Pedido de Sergio - Total de produtos: 4
+   - Notebook - Preço: R$3000.0 - Estoque: 5
+   - Smartphone - Preço: R$1500.0 - Estoque: 18
+   - Camiseta - Preço: R$50.0 - Estoque: 15
+   - Calça Jeans - Preço: R$120.0 - Estoque: 10
