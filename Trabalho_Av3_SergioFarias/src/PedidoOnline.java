@@ -14,7 +14,7 @@ class PedidoOnline extends Pedido implements Descontavel {
 
         @Override
         public double calcularDesconto(double preco) {
-            return preco * 0.1; // 10% de desconto em pedidos online
+            return preco * 0.1;
         }
     }
 

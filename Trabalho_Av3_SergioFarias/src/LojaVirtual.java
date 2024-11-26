@@ -23,7 +23,7 @@ public class LojaVirtual {
             System.out.print("Escolha uma opção: ");
 
             int opcao = scanner.nextInt();
-            scanner.nextLine(); // Consumir a quebra de linha
+            scanner.nextLine();
 
             switch (opcao) {
                 case 1:
@@ -72,7 +72,7 @@ public class LojaVirtual {
         System.out.println("1. Pedido Online");
         System.out.println("2. Pedido para Retirada");
         int tipoPedido = scanner.nextInt();
-        scanner.nextLine(); // Consumir a quebra de linha
+        scanner.nextLine();
 
         Pedido pedido = (tipoPedido == 1) ? new PedidoOnline(cliente) : new PedidoRetirada(cliente);
 
@@ -81,7 +81,7 @@ public class LojaVirtual {
             listarProdutos();
             System.out.print("Escolha um produto pelo número (ou 0 para finalizar): ");
             int escolhaProduto = scanner.nextInt();
-            scanner.nextLine(); // Consumir a quebra de linha
+            scanner.nextLine();
 
             if (escolhaProduto == 0) {
                 adicionandoProdutos = false;
@@ -89,7 +89,7 @@ public class LojaVirtual {
                 Produto produto = produtos.get(escolhaProduto - 1);
                 System.out.print("Quantidade desejada: ");
                 int quantidade = scanner.nextInt();
-                scanner.nextLine(); // Consumir a quebra de linha
+                scanner.nextLine();
 
                 try {
                     pedido.adicionarProduto(produto, quantidade);
