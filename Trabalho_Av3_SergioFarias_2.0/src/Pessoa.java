@@ -1,6 +1,6 @@
 public abstract class Pessoa extends Produtos implements Autorizacao{
 
-    String nomePessoa;
+    static String nomePessoa;
     boolean autorizacao;
 
     public Pessoa(String nomeProduto, double preco, int estoque) {

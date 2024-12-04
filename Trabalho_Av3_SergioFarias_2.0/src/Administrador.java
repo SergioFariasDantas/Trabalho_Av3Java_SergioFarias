@@ -4,6 +4,7 @@ public class Administrador extends Pessoa{
         super(nomeProduto, preco, estoque, autorizacao, nomePessoa);
     }
 
+
     @Override
     public boolean isAutorizacao(){
         return super.isAutorizacao() == true;
