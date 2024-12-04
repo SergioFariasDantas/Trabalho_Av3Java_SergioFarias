@@ -1,4 +1,3 @@
-import java.io.*;
 import java.util.*;
 
 public class LojaVirtual {
@@ -9,61 +8,68 @@ public class LojaVirtual {
 
     public static void main(String[] args) {
 
-        inicializaCadastro();
-
         Scanner prompt = new Scanner(System.in);
         boolean executandoCadastro = true;
 
-        int opcao = prompt.nextInt();
-        prompt.nextLine();
 
-        while(executandoCadastro = true){
+            while(executandoCadastro = true){
             System.out.println("\n==== Menu da Loja Virtual ====");
             System.out.println("1. Cadastre o usuário");
-            System.out.println("2 Sair da loja");
+            System.out.println("2 Continuar");
+
+            int opcao = prompt.nextInt();
+            prompt.nextLine();
 
             switch (opcao) {
                 case 1:
                     System.out.println("Qual o tipo de usuário? ");
-                        switch(opcao){
+                    System.out.println("1. Administrador");
+                    System.out.println("2. Cliente");
+
+                    int opcao2 = prompt.nextInt();
+                    prompt.nextLine();
+
+                        switch(opcao2){
                             case 1:
                                 System.out.println("1. Administrador");
-                                cadastroAdministrador;
+                                cadastroAdministrador();
                                 break;
                             case 2:
                                 System.out.println("2. Cliente");
-                                cadastroCliente;
+                                cadastroCliente();
+                                break;
+                            default:
+                                System.out.println("Opção inválida. Tente novamente.");
                                 break;
                         }
                     break;
                 case 2:
-                    System.out.println("Volte em breve! :)");
-                    break;
                     executandoCadastro = false;
-
+                    System.out.println("Encaminhando para menu de loja virtual...");
+                default:
+                    System.out.println("Opção inválida. Tente novamente.");
+                    break;
             }
         }
         prompt.close();
 
-        inicializarProdutos();
-
-        boolean executandoPedido = true;
-
-        public void execucaodeOpcoes(int opcao){
-
-        }
-
     }
 
-    private static void cadastroAdministrador(Scanner prompt){
+    private static void cadastroAdministrador(){
+        Scanner prompt = new Scanner(System.in);
         System.out.println("Digite o nome do administrador: ");
         String nomeAdministrador = prompt.nextLine();
-        Administrador administrador = new Administrador(nomeAdministrador);
+        nomeAdministrador = Administrador.nomePessoa;
     }
 
-    private static void cadastroCliente(Scanner prompt){
+    private static void cadastroCliente(){
+        Scanner prompt = new Scanner(System.in);
         System.out.println("Digite o nome do cliente: ");
         String nomeCliente = prompt.nextLine();
-        Cliente cliente = new Cliente(nomeCliente);
+        nomeCliente = Cliente.nomePessoa;
+    }
+
+    private static void opcaoExecucaoAdministrador(){
+
     }
 }
